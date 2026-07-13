@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Dijital Zen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "surface": "#f8f9fb",
+                        "outline": "#737685",
+                        "secondary-container": "#dce3f0",
+                        "surface-dim": "#d9dadc",
+                        "secondary-fixed": "#dce3f0",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-tint": "#0c56d0",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c3c6d6",
+                        "tertiary": "#7b2600",
+                        "inverse-surface": "#2e3132",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container-high": "#e7e8ea",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-tertiary-fixed": "#380d00",
+                        "primary-container": "#0052cc",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "inverse-on-surface": "#f0f1f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#5e6570",
+                        "on-tertiary-container": "#ffc6b2",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dae2ff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-secondary-fixed": "#151c25",
+                        "surface-container": "#edeef0",
+                        "on-secondary-fixed-variant": "#404751",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#a33500",
+                        "surface-container-highest": "#e1e2e4",
+                        "primary": "#003d9b",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary": "#585f6a",
+                        "inverse-primary": "#b2c5ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "secondary-fixed-dim": "#c0c7d3",
+                        "on-surface-variant": "#434654",
+                        "on-primary-fixed": "#001848"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base-unit": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "container-max": "800px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "gutter": "20px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-base": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .task-row:hover .quick-actions {
+            opacity: 1;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e1e2e4;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="w-full sticky top-0 bg-surface border-b border-outline-variant z-40">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<h1 class="font-display-lg text-display-lg font-bold text-primary">Yalın Odak</h1>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full" data-icon="settings">settings</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional profile headshot of a user with a clean, minimalist aesthetic, softly lit in a modern office environment. The color palette features neutral grays and professional blues, reflecting a calm and organized digital workspace. High-quality corporate portrait photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHX19mUnPFcUPGvgcONlVkivQXssfe_ULIgdG_1wUevXGNIMGrN2upheQh1TWvN1AFmTtzBMZJ_tl3p8fDrNnnsAzwHtwzJg0_ekBkOnMSnXWJ-iFzU5HK5wuQQe0SUxEludezfs_HhxXQappH0HrLxW2PY7D53afQwOK9ICCw7qYYIUg55lQWO5gIKhjpK72vGV_9IPm872zzXG-1wt4Mp-XUCJnHV3yAGeFZwRTGPdyGftCicdzDgQ"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex max-w-[1440px] mx-auto min-h-[calc(100vh-64px)]">
+<!-- SideNavBar Shell -->
+<aside class="hidden md:flex h-full w-64 flex-col p-md space-y-sm bg-surface-container-low border-r border-outline-variant/30 sticky top-16">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Yalın Odak</h2>
+<p class="font-label-bold text-label-bold text-secondary">Dijital Zen</p>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="inbox">inbox</span>
+                    Gelen Kutusu
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-primary bg-primary-container/10 rounded-full transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="today">today</span>
+                    Bugün
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                    Yakında
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+                    Tamamlananlar
+                </a>
+</nav>
+<button class="w-full flex items-center justify-center gap-sm bg-primary text-on-primary py-sm rounded-xl font-label-bold text-label-bold hover:shadow-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                Yeni Liste Ekle
+            </button>
+<div class="pt-lg border-t border-outline-variant/30 space-y-xs">
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="archive">archive</span>
+                    Arşiv
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+                    Çöp Kutusu
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 px-gutter py-lg flex flex-col items-center custom-scrollbar">
+<div class="w-full max-w-container-max space-y-lg">
+<!-- Progress Header -->
+<div class="space-y-sm">
+<div class="flex justify-between items-end">
+<h2 class="font-display-lg text-display-lg font-bold text-on-background">Bugün</h2>
+<span class="font-label-bold text-label-bold text-primary">60% Tamamlandı</span>
+</div>
+<div class="w-full h-[4px] bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[60%] transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Task Input Area -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl transition-all focus-within:ring-2 focus-within:ring-primary focus-within:ring-opacity-10 focus-within:border-primary">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-outline" data-icon="add_circle">add_circle</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-base font-body-base placeholder:text-outline/60" id="task-input" placeholder="Yeni görev ekle..." type="text"/>
+</div>
+<div class="flex items-center justify-between mt-md pt-sm border-t border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<button class="p-1 hover:bg-surface-container rounded text-outline-variant hover:text-primary transition-colors flex items-center" title="Tarih Ekle">
+<span class="material-symbols-outlined text-[20px]" data-icon="event">event</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-outline-variant hover:text-primary transition-colors flex items-center" title="Öncelik Seç">
+<span class="material-symbols-outlined text-[20px]" data-icon="priority_high">priority_high</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-outline-variant hover:text-primary transition-colors flex items-center" title="Etiket Ekle">
+<span class="material-symbols-outlined text-[20px]" data-icon="label">label</span>
+</button>
+</div>
+<button class="px-md py-1 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold hover:bg-primary-container transition-colors shadow-sm">
+                            Ekle
+                        </button>
+</div>
+</div>
+<!-- Pending Tasks -->
+<section class="space-y-md">
+<div class="flex items-center gap-sm">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Bekleyenler</span>
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="space-y-sm" id="pending-list">
+<!-- Task Item 1 -->
+<div class="task-row group bg-surface-container-lowest border border-outline-variant p-md flex items-center gap-md transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-center w-6 h-6 border-2 border-outline-variant rounded-lg cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px] opacity-0 group-hover:opacity-10 transition-opacity" data-icon="check">check</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<span class="text-body-base font-body-base text-on-background">Haftalık raporu hazırla</span>
+<div class="flex items-center gap-sm">
+<span class="px-sm py-[2px] bg-error-container text-error font-label-bold text-[10px] rounded uppercase">Yüksek</span>
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container font-label-bold text-[10px] rounded">İş</span>
+</div>
+</div>
+<div class="quick-actions opacity-0 transition-opacity flex items-center gap-sm">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-outline-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="task-row group bg-surface-container-lowest border border-outline-variant p-md flex items-center gap-md transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-center w-6 h-6 border-2 border-outline-variant rounded-lg cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px] opacity-0 group-hover:opacity-10 transition-opacity" data-icon="check">check</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<span class="text-body-base font-body-base text-on-background">Market alışverişi yap</span>
+<div class="flex items-center gap-sm">
+<span class="px-sm py-[2px] bg-[#fff8e1] text-[#b45309] font-label-bold text-[10px] rounded uppercase">Orta</span>
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container font-label-bold text-[10px] rounded">Kişisel</span>
+</div>
+</div>
+<div class="quick-actions opacity-0 transition-opacity flex items-center gap-sm">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-outline-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="task-row group bg-surface-container-lowest border border-outline-variant p-md flex items-center gap-md transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-center w-6 h-6 border-2 border-outline-variant rounded-lg cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px] opacity-0 group-hover:opacity-10 transition-opacity" data-icon="check">check</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<span class="text-body-base font-body-base text-on-background">E-postaları yanıtla</span>
+<div class="flex items-center gap-sm">
+<span class="px-sm py-[2px] bg-[#e8f5e9] text-[#2e7d32] font-label-bold text-[10px] rounded uppercase">Düşük</span>
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container font-label-bold text-[10px] rounded">İş</span>
+</div>
+</div>
+<div class="quick-actions opacity-0 transition-opacity flex items-center gap-sm">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary" data-icon="edit">edit</button>
+<button class="material-symbols-outlined text-outline-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Completed Tasks -->
+<section class="space-y-md opacity-70">
+<div class="flex items-center gap-sm">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Tamamlananlar</span>
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="space-y-sm" id="completed-list">
+<!-- Completed Item 1 -->
+<div class="group bg-surface-container border border-outline-variant/30 p-md flex items-center gap-md">
+<div class="flex items-center justify-center w-6 h-6 bg-primary-container text-on-primary rounded-lg cursor-default">
+<span class="material-symbols-outlined text-[18px] font-bold" data-icon="check">check</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<span class="text-body-base font-body-base text-outline line-through">Sabah yogası</span>
+<div class="flex items-center gap-sm grayscale opacity-50">
+<span class="px-sm py-[2px] bg-[#e8f5e9] text-[#2e7d32] font-label-bold text-[10px] rounded uppercase">Düşük</span>
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container font-label-bold text-[10px] rounded">Sağlık</span>
+</div>
+</div>
+</div>
+<!-- Completed Item 2 -->
+<div class="group bg-surface-container border border-outline-variant/30 p-md flex items-center gap-md">
+<div class="flex items-center justify-center w-6 h-6 bg-primary-container text-on-primary rounded-lg cursor-default">
+<span class="material-symbols-outlined text-[18px] font-bold" data-icon="check">check</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<span class="text-body-base font-body-base text-outline line-through">Sunum taslağını bitir</span>
+<div class="flex items-center gap-sm grayscale opacity-50">
+<span class="px-sm py-[2px] bg-error-container text-error font-label-bold text-[10px] rounded uppercase">Yüksek</span>
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container font-label-bold text-[10px] rounded">İş</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State Decoration (Asymmetric touch) -->
+<div class="pt-xl flex flex-col items-center justify-center text-center pb-xl">
+<div class="w-24 h-24 bg-primary-container/5 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl" data-icon="self_improvement">self_improvement</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant max-w-[300px]">Bugün daha fazla odaklanmak için zihnini boşalt.</p>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Navigation (Hidden on desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant/30 h-16 flex items-center justify-around z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="inbox">inbox</span>
+<span class="text-[10px] font-label-bold">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="today" style="font-variation-settings: 'FILL' 1;">today</span>
+<span class="text-[10px] font-label-bold">Bugün</span>
+</button>
+<button class="w-12 h-12 bg-primary text-on-primary rounded-full -translate-y-6 shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="text-[10px] font-label-bold">Yakında</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="text-[10px] font-label-bold">Bitenler</span>
+</button>
+</nav>
+<script>
+        // Simple micro-interaction for adding tasks
+        const taskInput = document.getElementById('task-input');
+        taskInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                // In a real app, logic to add the task would go here.
+                // For UI demo, just clear it.
+                this.value = '';
+                // Optional: show a toast or feedback
+                console.log('Task added');
+            }
+        });
+
+        // Toggle checkbox simulation
+        document.querySelectorAll('.task-row div.cursor-pointer').forEach(box => {
+            box.addEventListener('click', function() {
+                const check = this.querySelector('.material-symbols-outlined');
+                check.classList.toggle('opacity-0');
+                check.classList.toggle('opacity-100');
+                
+                const taskText = this.nextElementSibling.querySelector('.text-body-base');
+                taskText.classList.toggle('line-through');
+                taskText.classList.toggle('text-outline');
+            });
+        });
+    </script>
+</body></html>

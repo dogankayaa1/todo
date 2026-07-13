@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Kayıt Ol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f3f4f6",
+                    "secondary-container": "#dce3f0",
+                    "surface": "#f8f9fb",
+                    "primary-fixed": "#dae2ff",
+                    "surface-bright": "#f8f9fb",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-surface-variant": "#434654",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-error-container": "#93000a",
+                    "background": "#f8f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#404751",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-container-highest": "#e1e2e4",
+                    "inverse-on-surface": "#f0f1f3",
+                    "surface-variant": "#e1e2e4",
+                    "secondary-fixed": "#dce3f0",
+                    "outline-variant": "#c3c6d6",
+                    "primary": "#003d9b",
+                    "on-secondary-fixed": "#151c25",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "surface-dim": "#d9dadc",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#0052cc",
+                    "surface-container": "#edeef0",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e7e8ea",
+                    "outline": "#737685",
+                    "surface-tint": "#0c56d0",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#5e6570",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "inverse-primary": "#b2c5ff",
+                    "on-surface": "#191c1e",
+                    "tertiary": "#7b2600",
+                    "secondary": "#585f6a",
+                    "on-primary-fixed": "#001848",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "on-tertiary-container": "#ffc6b2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "xl": "40px",
+                    "base-unit": "4px",
+                    "sm": "8px",
+                    "gutter": "20px",
+                    "lg": "24px",
+                    "container-max": "800px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-base": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center p-gutter">
+<!-- Ambient background element -->
+<div class="fixed inset-0 overflow-hidden -z-10">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary-container/20 blur-[120px]"></div>
+</div>
+<!-- Main Auth Container -->
+<main class="w-full max-w-[440px] flex flex-col items-center">
+<!-- Header / Logo Area -->
+<div class="mb-xl text-center">
+<div class="flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Yalın Odak</h1>
+<p class="text-secondary font-body-base mt-xs">Dijital zen yolculuğuna başla</p>
+</div>
+<!-- Card Container -->
+<div class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl p-xl shadow-sm transition-all duration-300 hover:shadow-md">
+<form class="space-y-lg" id="signup-form">
+<div class="space-y-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Yeni Hesap Oluştur</h2>
+<p class="text-body-sm text-on-surface-variant">Odaklanmış bir yaşam için ilk adımı atın.</p>
+</div>
+<!-- Input Fields -->
+<div class="space-y-md">
+<!-- Ad Soyad -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="full_name">Ad Soyad</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] group-focus-within:text-primary transition-colors">person</span>
+<input class="w-full pl-10 pr-md py-sm bg-surface-bright border border-outline-variant rounded-lg font-body-base text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="full_name" placeholder="Adınız ve soyadınız" required="" type="text"/>
+</div>
+</div>
+<!-- E-posta -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="email">E-posta Adresi</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-10 pr-md py-sm bg-surface-bright border border-outline-variant rounded-lg font-body-base text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="email" placeholder="ornek@eposta.com" required="" type="email"/>
+</div>
+</div>
+<!-- Şifre -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="password">Şifre</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-10 pr-md py-sm bg-surface-bright border border-outline-variant rounded-lg font-body-base text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="password" placeholder="En az 8 karakter" required="" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" onclick="togglePassword()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-toggle-icon">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-sm">
+<div class="pt-1">
+<input class="w-4 h-4 rounded-lg border-outline-variant text-primary focus:ring-primary transition-all cursor-pointer" id="terms" required="" type="checkbox"/>
+</div>
+<label class="text-body-sm text-on-surface-variant cursor-pointer select-none" for="terms">
+<span class="font-medium text-primary">Kullanım Koşulları</span> ve <span class="font-medium text-primary">Gizlilik Politikası</span>'nı okudum ve kabul ediyorum.
+                    </label>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary-container text-on-primary py-md rounded-xl font-headline-md text-headline-md transition-all duration-200 active:scale-[0.98] hover:bg-primary-container/90 hover:shadow-lg shadow-primary-container/20" type="submit">
+                    Hesap Oluştur
+                </button>
+<!-- Divider -->
+<div class="relative flex items-center py-sm">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-md text-label-caps text-label-caps text-outline">VEYA</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<!-- Social Sign Up (Small) -->
+<button class="w-full flex items-center justify-center gap-sm bg-surface-bright border border-outline-variant py-sm rounded-lg text-on-surface-variant font-body-base hover:bg-surface-container-low transition-colors" type="button">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0KeVEk1LZy3zG-9eRaeFc1LdflE42BE-B7p54tt-iVCyq360sUdSabv_exJ_IULaVYdLGCxpDNuG5GIz4xF9cF4F9d97PTsO0-H3lUBrzzgVFLV8MOzhZNy011YnlbmwaBqa9nKRsKZE8kg_rKMIv79hkRU2QVwHeIjWtqDTTCQ11haWGrB4ncVkgMs26I_ApPwsvJLTQvx6W8NouYatFiRR5XKkp1pp-uTAqgTmFUna-nC60dT7iwA"/>
+                    Google ile devam et
+                </button>
+</form>
+<!-- Footer Link -->
+<div class="mt-lg text-center">
+<p class="text-body-sm text-on-surface-variant">
+                    Zaten hesabın var mı? 
+                    <a class="text-primary font-bold hover:underline underline-offset-4 transition-all" href="#">Giriş Yap</a>
+</p>
+</div>
+</div>
+<!-- Quick Help Footer -->
+<div class="mt-xl flex items-center gap-xl opacity-60">
+<a class="text-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Destek</a>
+<a class="text-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Sıkça Sorulanlar</a>
+<a class="text-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a>
+</div>
+</main>
+<script>
+        // Micro-interaction for password visibility
+        function togglePassword() {
+            const pwd = document.getElementById('password');
+            const icon = document.getElementById('password-toggle-icon');
+            if (pwd.type === 'password') {
+                pwd.type = 'text';
+                icon.innerText = 'visibility_off';
+            } else {
+                pwd.type = 'password';
+                icon.innerText = 'visibility';
+            }
+        }
+
+        // Form Submission visual feedback
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.disabled = true;
+            btn.innerHTML = `
+                <div class="flex items-center justify-center gap-sm">
+                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Hazırlanıyor...
+                </div>
+            `;
+            
+            setTimeout(() => {
+                // Success state simulation
+                btn.classList.remove('bg-primary-container');
+                btn.classList.add('bg-green-600');
+                btn.innerHTML = `
+                    <div class="flex items-center justify-center gap-sm">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        Hoş Geldiniz!
+                    </div>
+                `;
+            }, 1500);
+        });
+    </script>
+</body></html>

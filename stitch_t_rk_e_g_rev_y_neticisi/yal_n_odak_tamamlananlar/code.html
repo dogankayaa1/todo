@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Tamamlananlar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Shared Style Guidance Tokens applied via Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary": "#7b2600",
+                    "on-primary-fixed": "#001848",
+                    "on-background": "#191c1e",
+                    "secondary-fixed": "#dce3f0",
+                    "tertiary-container": "#a33500",
+                    "on-error": "#ffffff",
+                    "surface-container": "#edeef0",
+                    "secondary-container": "#dce3f0",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "on-tertiary-container": "#ffc6b2",
+                    "surface-container-highest": "#e1e2e4",
+                    "outline-variant": "#c3c6d6",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dae2ff",
+                    "on-surface-variant": "#434654",
+                    "surface-dim": "#d9dadc",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-primary-container": "#c4d2ff",
+                    "on-primary": "#ffffff",
+                    "secondary": "#585f6a",
+                    "primary": "#003d9b",
+                    "surface-variant": "#e1e2e4",
+                    "outline": "#737685",
+                    "surface": "#f8f9fb",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f3f4f6",
+                    "background": "#f8f9fb",
+                    "surface-container-high": "#e7e8ea",
+                    "on-secondary-container": "#5e6570",
+                    "inverse-surface": "#2e3132",
+                    "inverse-primary": "#b2c5ff",
+                    "on-secondary-fixed-variant": "#404751",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#0052cc",
+                    "on-secondary-fixed": "#151c25",
+                    "surface-bright": "#f8f9fb",
+                    "surface-tint": "#0c56d0",
+                    "on-tertiary-fixed": "#380d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "16px",
+                    "gutter": "20px",
+                    "xl": "40px",
+                    "base-unit": "4px",
+                    "container-max": "800px",
+                    "lg": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-base": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "label-bold": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fb;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        /* Custom scrollbar for minimalist feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e1e2e4; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c3c6d6; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface dark:bg-surface-dim w-full sticky top-0 z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-md">
+<span class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed">Yalın Odak</span>
+</div>
+<div class="hidden md:flex items-center space-x-lg">
+<nav class="flex space-x-md">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-body-base text-body-base hover:bg-surface-container-low transition-colors px-sm py-xs rounded" href="#">Gelen Kutusu</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-body-base text-body-base hover:bg-surface-container-low transition-colors px-sm py-xs rounded" href="#">Bugün</a>
+<a class="text-primary font-bold border-b-2 border-primary font-body-base text-body-base px-sm py-xs" href="#">Tamamlananlar</a>
+</nav>
+</div>
+<div class="flex items-center space-x-md">
+<button class="material-symbols-outlined text-primary p-xs hover:bg-surface-container-low rounded-full transition-colors active:scale-95 duration-150">notifications</button>
+<button class="material-symbols-outlined text-primary p-xs hover:bg-surface-container-low rounded-full transition-colors active:scale-95 duration-150">settings</button>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a focused young user with a clean, minimalist aesthetic, softly lit in a modern bright office environment, reflecting the calm and organized spirit of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMBsB-a49i37M35xO1SIxK-0IaJFzAl6JZLwgR48sXDdmr4RTjqKyuVo0syv_Pq74-QwWIwPq22OMWby_hDeetOk_Z9MADLIs-9EVjzoW2khebN24VFoBCG-YNaelJ_JMJdYC8HglxKloXcEcZZNMBqWZSqpl2Zexu1SWuHD6Y0XPz9xgm9cjtTsBmXPfDax6GHN8W_K86LFk1zwswlksdeV_igMVWioT4ZJlTqHHfcLySULzGeSsESw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Shell -->
+<div class="flex min-h-[calc(100vh-64px)]">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden lg:flex flex-col h-full w-64 fixed left-0 top-16 bg-surface-container-low dark:bg-surface-container p-md space-y-sm border-r border-outline-variant">
+<div class="mb-lg px-xs">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">target</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Yalın Odak</h2>
+<p class="text-label-bold font-label-bold text-secondary">Dijital Zen</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all duration-200 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined">inbox</span> Gelen Kutusu
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all duration-200 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined">today</span> Bugün
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all duration-200 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined">calendar_month</span> Yakında
+                </a>
+<!-- Active Item (Tamamlananlar) -->
+<a class="flex items-center gap-md px-md py-sm text-primary dark:text-primary-fixed-variant bg-primary-container/10 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span> Tamamlananlar
+                </a>
+</nav>
+<button class="w-full mt-lg py-md px-md bg-primary-container text-on-primary rounded-xl font-label-bold text-label-bold flex items-center justify-center gap-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span> Yeni Liste Ekle
+            </button>
+<footer class="pt-lg border-t border-outline-variant space-y-xs">
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all duration-200 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined">archive</span> Arşiv
+                </a>
+<a class="flex items-center gap-md px-md py-sm text-secondary hover:bg-surface-variant/50 transition-all duration-200 rounded-full font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined">delete</span> Çöp Kutusu
+                </a>
+</footer>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 lg:ml-64 px-gutter py-xl flex flex-col items-center">
+<div class="w-full max-w-container-max space-y-lg">
+<!-- Summary Header (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="col-span-1 md:col-span-2 p-xl bg-primary text-on-primary rounded-xl flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<h1 class="font-display-lg text-display-lg mb-sm">Harika Gidiyorsun.</h1>
+<p class="font-body-base text-body-base opacity-80">Son 30 gün içinde toplam 42 görevi başarıyla tamamladın.</p>
+</div>
+<div class="mt-lg relative z-10 flex items-end gap-xs">
+<span class="text-[48px] font-bold leading-none">42</span>
+<span class="font-label-bold text-label-bold mb-xs uppercase tracking-widest opacity-70">Görev Tamamlandı</span>
+</div>
+<!-- Atmospheric effect -->
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-on-primary-container/20 rounded-full blur-3xl"></div>
+</div>
+<div class="p-lg bg-surface-container-highest border border-outline-variant rounded-xl flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-[40px] text-primary mb-md" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Odak Ustası</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-xs">Haftalık hedefine %85 oranında ulaştın.</p>
+</div>
+</section>
+<!-- List Header with Progress Bar -->
+<div class="pt-md">
+<div class="flex justify-between items-center mb-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Tamamlanan Geçmişi</h2>
+<button class="text-primary font-label-bold text-label-bold flex items-center gap-xs hover:underline transition-all">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filtrele
+                        </button>
+</div>
+<div class="w-full h-[4px] bg-outline-variant rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-primary-container transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<!-- Completed Tasks List -->
+<div class="space-y-md">
+<!-- Task Item 1 -->
+<div class="group flex items-center bg-white border border-outline-variant p-md rounded-lg transition-all duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="mr-md flex-shrink-0">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-base text-body-base text-outline line-through truncate">Üç Aylık Strateji Sunumu Hazırla</h4>
+<div class="flex items-center gap-md mt-xs">
+<span class="px-sm py-[2px] bg-error-container/30 text-error text-label-bold font-label-bold rounded">Yüksek</span>
+<span class="text-body-sm text-secondary flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+                                    Dün tamamlandı
+                                </span>
+</div>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-colors" title="Geri Al">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-colors" title="Sil">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="group flex items-center bg-white border border-outline-variant p-md rounded-lg transition-all duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="mr-md flex-shrink-0">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-base text-body-base text-outline line-through truncate">Ekip Haftalık Senkronizasyon Toplantısı</h4>
+<div class="flex items-center gap-md mt-xs">
+<span class="px-sm py-[2px] bg-tertiary-fixed/30 text-tertiary text-label-bold font-label-bold rounded">Orta</span>
+<span class="text-body-sm text-secondary flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+                                    2 gün önce
+                                </span>
+</div>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="group flex items-center bg-white border border-outline-variant p-md rounded-lg transition-all duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="mr-md flex-shrink-0">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-base text-body-base text-outline line-through truncate">Aylık Bütçe Analizi ve Raporlama</h4>
+<div class="flex items-center gap-md mt-xs">
+<span class="px-sm py-[2px] bg-secondary-fixed-dim/30 text-secondary text-label-bold font-label-bold rounded">Düşük</span>
+<span class="text-body-sm text-secondary flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+                                    3 gün önce
+                                </span>
+</div>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="pt-lg pb-sm">
+<span class="text-label-caps font-label-caps text-secondary uppercase tracking-[0.2em]">Geçen Hafta</span>
+</div>
+<!-- Task Item 4 -->
+<div class="group flex items-center bg-white border border-outline-variant p-md rounded-lg transition-all duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] opacity-80">
+<div class="mr-md flex-shrink-0">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-base text-body-base text-outline line-through truncate">Müşteri Geri Bildirim Formu Tasarımı</h4>
+<div class="flex items-center gap-md mt-xs">
+<span class="px-sm py-[2px] bg-tertiary-fixed/30 text-tertiary text-label-bold font-label-bold rounded">Orta</span>
+<span class="text-body-sm text-secondary flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+                                    8 gün önce
+                                </span>
+</div>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-sm">
+<button class="p-xs text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-xs text-secondary hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default, shown if no tasks) -->
+<div class="hidden flex-col items-center justify-center py-xl space-y-md text-center opacity-60">
+<div class="w-32 h-32 bg-surface-container-high rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[64px] text-outline">history</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Henüz tamamlanan görev yok</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-xs">Başarıların burada listelenecek. İlk görevini tamamlamaya ne dersin?</p>
+</div>
+</div>
+<!-- Decorative Illustration Section -->
+<section class="mt-xl pt-xl border-t border-outline-variant flex flex-col md:flex-row items-center gap-xl">
+<div class="flex-1 space-y-md">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Üretkenliğin Yeni Hali</h2>
+<p class="font-body-base text-body-base text-secondary max-w-md">Yalın Odak ile sadece görevlerini takip etmekle kalmaz, zihnindeki gürültüyü azaltarak gerçek potansiyeline odaklanırsın.</p>
+<button class="px-lg py-md border-2 border-primary text-primary font-label-bold text-label-bold rounded-xl hover:bg-primary hover:text-on-primary transition-all active:scale-95">İstatistikleri Görüntüle</button>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-full overflow-hidden border-8 border-white shadow-xl relative">
+<img class="w-full h-full object-cover" data-alt="A serene, high-end digital painting of a peaceful workspace with a single succulent plant, a white notebook, and soft morning light streaming through a window. The style is hyper-minimalist and clean, with a color palette of soft greys, pure whites, and the calming blue tones of the Yalın Odak brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuEFYdwmTagoE7m3Y-HTSAVB9d9Gdtu-jLpbJB_H_uwKZf0ICgZYmIoZcGU0Pnd9QacTj5KK-fuiz4RyfEJOpcXFJ-1lIBWCrCjCNQHme-37xvcEAl6R5Hzd2ocCMbun7dd11yGgvd7Ed0_JOKToR-fHCSUpYtqAHTSGksa6wCfwZYhCnDOLw3dkgoMhdGkCBjJ3CguclQzunoVIHcWTcKqqqkzjiVgETYPsb5eBg7q7kTPD-NzE4qcQ"/>
+<!-- Floating badge -->
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-white/90 backdrop-blur-md p-md rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[32px]">self_improvement</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Navigation (Shared Component) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface border-t border-outline-variant px-gutter py-sm flex justify-around items-center z-50">
+<a class="flex flex-col items-center text-on-surface-variant gap-xs" href="#">
+<span class="material-symbols-outlined">inbox</span>
+<span class="text-[10px] font-label-bold uppercase">Gelen</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant gap-xs" href="#">
+<span class="material-symbols-outlined">today</span>
+<span class="text-[10px] font-label-bold uppercase">Bugün</span>
+</a>
+<div class="bg-primary text-on-primary p-md rounded-full -mt-lg shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</div>
+<a class="flex flex-col items-center text-primary gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span class="text-[10px] font-label-bold uppercase">Biten</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant gap-xs" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label-bold uppercase">Ayar</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for undo button
+        document.querySelectorAll('button[title="Geri Al"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const row = this.closest('.group');
+                row.style.transform = 'translateX(-20px)';
+                row.style.opacity = '0';
+                setTimeout(() => {
+                    row.remove();
+                    // In a real app, this would move back to the "Today" list
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Zihnini Özgür Bırak</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f3f4f6",
+                    "secondary-container": "#dce3f0",
+                    "surface": "#f8f9fb",
+                    "primary-fixed": "#dae2ff",
+                    "surface-bright": "#f8f9fb",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-surface-variant": "#434654",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-error-container": "#93000a",
+                    "background": "#f8f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#404751",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-container-highest": "#e1e2e4",
+                    "inverse-on-surface": "#f0f1f3",
+                    "surface-variant": "#e1e2e4",
+                    "secondary-fixed": "#dce3f0",
+                    "outline-variant": "#c3c6d6",
+                    "primary": "#003d9b",
+                    "on-secondary-fixed": "#151c25",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "surface-dim": "#d9dadc",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#0052cc",
+                    "surface-container": "#edeef0",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e7e8ea",
+                    "outline": "#737685",
+                    "surface-tint": "#0c56d0",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-secondary-container": "#5e6570",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "inverse-primary": "#b2c5ff",
+                    "on-surface": "#191c1e",
+                    "tertiary": "#7b2600",
+                    "secondary": "#585f6a",
+                    "on-primary-fixed": "#001848",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "on-tertiary-container": "#ffc6b2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "xl": "40px",
+                    "base-unit": "4px",
+                    "sm": "8px",
+                    "gutter": "20px",
+                    "lg": "24px",
+                    "container-max": "800px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-base": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(225, 228, 232, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<nav class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg font-bold text-primary">Yalın Odak</div>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="text-primary font-bold border-b-2 border-primary font-body-base text-body-base h-full flex items-center" href="#">Ana Sayfa</a>
+<a class="text-on-surface-variant font-body-base text-body-base hover:bg-surface-container-low transition-colors px-md py-xs rounded" href="#">Özellikler</a>
+<a class="text-on-surface-variant font-body-base text-body-base hover:bg-surface-container-low transition-colors px-md py-xs rounded" href="#">Fiyatlandırma</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="active:scale-95 transition-transform duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-bold text-label-bold transition-all hover:bg-primary-container active:scale-95">
+                    Hemen Başla
+                </button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-gutter md:px-0">
+<!-- Hero Section -->
+<section class="py-xl md:py-24 text-center">
+<div class="max-w-2xl mx-auto space-y-lg">
+<h1 class="font-display-lg text-display-lg md:text-[48px] md:leading-[56px] text-on-background animate-fade-in">
+                    Zihnini özgür bırak, <br class="hidden md:block"/> <span class="text-primary">işine odaklan</span>
+</h1>
+<p class="text-on-surface-variant font-body-base text-body-base max-w-lg mx-auto">
+                    Karmaşayı geride bırakın. Yalın Odak, en önemli görevlerinize odaklanmanız için tasarlanmış minimalist bir üretkenlik alanıdır.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-md pt-md">
+<button class="w-full md:w-auto bg-primary text-on-primary px-xl py-md rounded-full font-headline-md text-headline-md shadow-lg hover:shadow-xl transition-all active:scale-95">
+                        Ücretsiz Kullanmaya Başla
+                    </button>
+<button class="w-full md:w-auto border border-outline text-primary px-xl py-md rounded-full font-headline-md text-headline-md hover:bg-surface-container transition-all">
+                        Nasıl Çalışır?
+                    </button>
+</div>
+</div>
+<!-- Bento Preview Section -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-md h-auto md:h-[400px]">
+<div class="md:col-span-2 glass-card rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean and modern UI dashboard of a productivity application showing a minimalist task list on a white background with subtle blue accents. The layout is spacious with plenty of white space, featuring a progress bar at the top and delicate typography. Soft, natural lighting enhances the professional and calm digital zen atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nzcYbSZ2I5gGqF3jW-lS86k7Qdpkgn2hPD1lUBEUatCygnnQtp01lKm7AvaqYNiheWLqf2Yzvba4UnBHTLbLuzXojgl5LvhnNGIl8y1Ut4TiMJV28jBPockrgrptZ78Y_wZHIQOuzXLD1GV6HlR7ChmueyuEHlEyxZZeGAiEccUeDivRGQQnmQLtfuAKVPHoKwURAXCM2h5ILIuYspWqCQKE0E962bjUakt1HH2LRMg1mVitICqXjg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent flex items-end p-lg">
+<span class="text-white font-label-bold text-label-bold bg-primary px-sm py-xs rounded">Gelişmiş Dashboard</span>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-md">
+<div class="glass-card rounded-xl flex flex-col justify-center items-center p-lg border-primary/20">
+<span class="material-symbols-outlined text-primary text-[48px] mb-md" data-icon="bolt">bolt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ultra Hızlı</h3>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant">Saniyeler içinde görev ekleyin.</p>
+</div>
+<div class="glass-card rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a smartphone screen displaying a sleek mobile app interface for task management. The design follows a light-mode aesthetic with soft grays and primary blue highlight colors. Elegant icons for priority levels are visible. The atmosphere is clean, corporate, and focuses on extreme clarity and ease of use." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfRPOfOciFOP2EYuQree66d2PlbhR5k5fqfwARCrhOjj91fmUfLndNlip-0P8zB-TZkSRwD3vA54kNEBzTFteeh3_hnzwk3EwXb_hlWiqP_ZTHhFtVR6B_0EQilkgCjRfcrZpaUImiVtabT0m_uwZQyMqBo2Q19SuCLnSl--ynPSkz8pQ8T0RspI9GmI-9zEET1pl4GOmxZPEv_ZQxiEYcyuCgFqqUSaxb9L8qtb-bsOktGEN6ait9CA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="py-xl">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-display-lg text-on-background">Temel Özellikler</h2>
+<p class="text-on-surface-variant font-body-base text-body-base mt-sm">Sadece ihtiyacınız olan araçlar, fazlası değil.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Feature 1 -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl transition-all hover:shadow-md">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-md text-primary">
+<span class="material-symbols-outlined" data-icon="add_task">add_task</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Hızlı Görev Ekleme</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Zihninizdeki fikirleri anında kağıda dökün. Kısayollar ve akıllı giriş ile akışınızı bozmayın.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl transition-all hover:shadow-md">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-md text-tertiary">
+<span class="material-symbols-outlined" data-icon="priority_high">priority_high</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Öncelik Yönetimi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Acil ve önemli olanı bir bakışta görün. Renk kodlu etiketlerle odağınızı doğru yere yönlendirin.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl transition-all hover:shadow-md">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-md text-secondary">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm text-on-surface">Sade Arayüz</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Karmaşıklıktan arındırılmış, göz yormayan tasarım. "Digital Zen" felsefesi ile tasarlanmış her piksel.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Dynamic List Preview (Interactive feel) -->
+<section class="py-xl">
+<div class="glass-card rounded-2xl overflow-hidden border border-outline-variant shadow-sm max-w-2xl mx-auto">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="checklist">checklist</span>
+<span class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant">Bugün</span>
+</div>
+<div class="text-primary font-label-bold text-label-bold">60% Tamamlandı</div>
+</div>
+<div class="h-1 bg-surface-container-highest">
+<div class="h-full bg-primary w-[60%] transition-all duration-1000"></div>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="p-md flex items-center justify-between group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-6 h-6 border-2 border-outline rounded-lg flex items-center justify-center cursor-pointer hover:border-primary transition-colors"></div>
+<span class="font-body-base text-body-base text-on-surface">Yalın Odak ana sayfa tasarımını bitir</span>
+</div>
+<div class="flex items-center gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="bg-error-container text-on-error-container px-sm py-xs rounded text-label-bold font-label-bold">Yüksek</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="p-md flex items-center justify-between group bg-surface-bright/50">
+<div class="flex items-center gap-md">
+<div class="w-6 h-6 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[16px]" data-icon="done">done</span>
+</div>
+<span class="font-body-base text-body-base text-outline line-through">Günlük toplantı notlarını paylaş</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="bg-surface-container-highest text-on-secondary-fixed-variant px-sm py-xs rounded text-label-bold font-label-bold">Düşük</span>
+</div>
+</div>
+<div class="p-md flex items-center justify-between group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-md w-full">
+<span class="material-symbols-outlined text-outline" data-icon="add">add</span>
+<input class="bg-transparent border-none focus:ring-0 font-body-base text-body-base text-on-surface-variant w-full" placeholder="Yeni bir görev ekle..." type="text"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl mb-xl">
+<div class="bg-primary rounded-2xl p-xl text-center text-on-primary relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-container rounded-full opacity-20"></div>
+<div class="absolute -bottom-8 -left-8 w-40 h-40 bg-secondary-container rounded-full opacity-10"></div>
+<h2 class="font-display-lg text-display-lg mb-md relative z-10">Daha fazlasını başarmaya hazır mısın?</h2>
+<p class="text-on-primary-container font-body-base text-body-base mb-lg max-w-lg mx-auto relative z-10">
+                    Binlerce profesyonel gibi siz de Yalın Odak ile tanışın. İlk listenizi oluşturmak sadece 10 saniye sürer.
+                </p>
+<button class="bg-white text-primary px-xl py-md rounded-full font-headline-md text-headline-md transition-all hover:bg-surface shadow-xl active:scale-95 relative z-10">
+                    Ücretsiz Başla
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant py-xl">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-xl">
+<div class="col-span-1 md:col-span-2">
+<div class="font-display-lg text-display-lg font-bold text-primary mb-md">Yalın Odak</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+                    Dijital dünyada odağınızı korumanıza yardımcı olan minimal bir yaşam aracı.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-md">Ürün</h4>
+<ul class="space-y-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Özellikler</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Masaüstü Uygulaması</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mobil Sürüm</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface mb-md">Destek</h4>
+<ul class="space-y-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Yardım Merkezi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gizlilik Politikası</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">İletişim</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-outline-variant text-center md:text-left">
+<p class="font-label-caps text-label-caps text-on-secondary-fixed-variant">© 2024 YALIN ODAK. TÜM HAKLARI SAKLIDIR.</p>
+</div>
+</footer>
+<!-- Mobile Bottom NavBar (Shown only on small screens) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container border-t border-outline-variant h-16 flex justify-around items-center z-50">
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" data-icon="today">today</span>
+<span class="text-[10px] font-semibold">Bugün</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="text-[10px]">Yakında</span>
+</button>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mt-8 shadow-lg text-on-primary">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</div>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="text-[10px]">Tamamlanan</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px]">Ayarlar</span>
+</button>
+</div>
+<script>
+        // Simple Micro-interaction for the progress bar and cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Çöp Kutusu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary": "#7b2600",
+                        "on-primary-fixed": "#001848",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#dce3f0",
+                        "tertiary-container": "#a33500",
+                        "on-error": "#ffffff",
+                        "surface-container": "#edeef0",
+                        "secondary-container": "#dce3f0",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-tertiary-container": "#ffc6b2",
+                        "surface-container-highest": "#e1e2e4",
+                        "outline-variant": "#c3c6d6",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "on-surface-variant": "#434654",
+                        "surface-dim": "#d9dadc",
+                        "secondary-fixed-dim": "#c0c7d3",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-primary-container": "#c4d2ff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#585f6a",
+                        "primary": "#003d9b",
+                        "surface-variant": "#e1e2e4",
+                        "outline": "#737685",
+                        "surface": "#f8f9fb",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f6",
+                        "background": "#f8f9fb",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-container": "#5e6570",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#b2c5ff",
+                        "on-secondary-fixed-variant": "#404751",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#0052cc",
+                        "on-secondary-fixed": "#151c25",
+                        "surface-bright": "#f8f9fb",
+                        "surface-tint": "#0c56d0",
+                        "on-tertiary-fixed": "#380d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "md": "16px",
+                        "gutter": "20px",
+                        "xl": "40px",
+                        "base-unit": "4px",
+                        "container-max": "800px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-base": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .task-card:hover .quick-actions { opacity: 1; }
+        .transition-all { transition: all 0.2s ease-in-out; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-full w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-surface-container flex flex-col p-md space-y-sm z-50">
+<div class="mb-lg">
+<h1 class="font-headline-md text-headline-md font-semibold text-primary">Yalın Odak</h1>
+<p class="font-label-bold text-label-bold text-secondary">Dijital Zen</p>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-secondary hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">inbox</span>
+<span>Gelen Kutusu</span>
+</a>
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-secondary hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">today</span>
+<span>Bugün</span>
+</a>
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-secondary hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span>Yakında</span>
+</a>
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-secondary hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<span>Tamamlananlar</span>
+</a>
+</nav>
+<div class="pt-md border-t border-outline-variant space-y-xs">
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-secondary hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">archive</span>
+<span>Arşiv</span>
+</a>
+<!-- Active Navigation State for Trash -->
+<a class="flex items-center gap-sm p-sm font-label-bold text-label-bold text-primary bg-primary-container/10 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">delete</span>
+<span>Çöp Kutusu</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar (Shell) -->
+<header class="w-full sticky top-0 bg-surface dark:bg-surface-dim border-b border-outline-variant z-40">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">delete</span>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Çöp Kutusu</h2>
+</div>
+<div class="flex items-center gap-md">
+<div class="relative group">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer p-sm hover:bg-surface-container-low transition-colors rounded-full">notifications</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer p-sm hover:bg-surface-container-low transition-colors rounded-full">settings</span>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist portrait of a modern digital user, shot in soft natural lighting against a neutral grey background. The professional aesthetic features a shallow depth of field, emphasizing the calm, focused expression of the person. The overall color palette is composed of muted blues and warm greys, aligning with a corporate minimalist design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEXZTWgH7aV5gvddYXctlbwpwlHVhERHFJEOjYM8kiuoeqs9dimISC8lHPYXfGs7vmdOZuauBBy5wkA43MPpOSC4MwNBCBK8-wjE8gRYCM3UPaDQqMvC9NSNUacwtvGSBQ7wbAzGAyPDAS4zUtJUmJW8QgzhN_YyGS0JwGAvBRp1RT78iNDpEKN-COZMyoTqaOwv3NghWTXqvTI9XyT9BZH9lsMUK7T1aCeeeyndkcoT-7iHrqA7vFqw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<!-- Trash Header & Actions -->
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h3 class="font-display-lg text-display-lg text-on-surface">Silinen Öğeler</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Bu öğeler 30 gün sonra kalıcı olarak silinecektir.</p>
+</div>
+<button class="flex items-center gap-sm px-md py-sm bg-error-container text-on-error-container font-label-bold text-label-bold rounded-lg hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">auto_delete</span>
+                    Çöpü Boşalt
+                </button>
+</div>
+<!-- Task List Grid/Container -->
+<div class="space-y-md">
+<!-- Task Row 1 -->
+<div class="task-card flex items-center justify-between p-md bg-white border border-outline-variant rounded-lg transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-body-base text-body-base text-on-surface line-through decoration-on-surface-variant opacity-60">Haftalık Rapor Hazırlığı</p>
+<span class="px-sm py-[2px] bg-red-100 text-red-800 text-[10px] font-bold rounded-full uppercase tracking-wider">Yüksek</span>
+</div>
+</div>
+<div class="quick-actions flex items-center gap-xs opacity-0 transition-all">
+<button class="p-sm text-primary hover:bg-primary-container/10 rounded-full transition-all flex items-center gap-xs" title="Geri Yükle">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+<span class="font-label-bold text-label-bold">Geri Yükle</span>
+</button>
+<button class="p-sm text-error hover:bg-error-container/20 rounded-full transition-all flex items-center gap-xs" title="Kalıcı Olarak Sil">
+<span class="material-symbols-outlined">delete_forever</span>
+<span class="font-label-bold text-label-bold">Kalıcı Sil</span>
+</button>
+</div>
+</div>
+<!-- Task Row 2 -->
+<div class="task-card flex items-center justify-between p-md bg-white border border-outline-variant rounded-lg transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-body-base text-body-base text-on-surface line-through decoration-on-surface-variant opacity-60">Müşteri E-postalarını Yanıtla</p>
+<span class="px-sm py-[2px] bg-amber-100 text-amber-800 text-[10px] font-bold rounded-full uppercase tracking-wider">Orta</span>
+</div>
+</div>
+<div class="quick-actions flex items-center gap-xs opacity-0 transition-all">
+<button class="p-sm text-primary hover:bg-primary-container/10 rounded-full transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+<span class="font-label-bold text-label-bold">Geri Yükle</span>
+</button>
+<button class="p-sm text-error hover:bg-error-container/20 rounded-full transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined">delete_forever</span>
+<span class="font-label-bold text-label-bold">Kalıcı Sil</span>
+</button>
+</div>
+</div>
+<!-- Task Row 3 -->
+<div class="task-card flex items-center justify-between p-md bg-white border border-outline-variant rounded-lg transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">shopping_basket</span>
+</div>
+<div>
+<p class="font-body-base text-body-base text-on-surface line-through decoration-on-surface-variant opacity-60">Market Alışveriş Listesi</p>
+<span class="px-sm py-[2px] bg-green-100 text-green-800 text-[10px] font-bold rounded-full uppercase tracking-wider">Düşük</span>
+</div>
+</div>
+<div class="quick-actions flex items-center gap-xs opacity-0 transition-all">
+<button class="p-sm text-primary hover:bg-primary-container/10 rounded-full transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+<span class="font-label-bold text-label-bold">Geri Yükle</span>
+</button>
+<button class="p-sm text-error hover:bg-error-container/20 rounded-full transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined">delete_forever</span>
+<span class="font-label-bold text-label-bold">Kalıcı Sil</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Concept (Hidden by default, shown via JS if needed) -->
+<div class="hidden flex flex-col items-center justify-center py-xl text-center space-y-md" id="empty-state">
+<div class="w-48 h-48 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-outline opacity-40">delete_sweep</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Çöp Kutunuz Tertemiz</h4>
+<p class="font-body-base text-body-base text-on-surface-variant">Gereksiz hiçbir şey yok. Zihninizi boşaltmaya devam edin.</p>
+</div>
+</div>
+<!-- Visual Decorative Element -->
+<div class="mt-xl grid grid-cols-3 gap-lg opacity-40">
+<div class="h-32 border border-dashed border-outline-variant rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">cleaning_services</span>
+</div>
+<div class="h-32 border border-dashed border-outline-variant rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">eco</span>
+</div>
+<div class="h-32 border border-dashed border-outline-variant rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">layers_clear</span>
+</div>
+</div>
+</section>
+</main>
+<script>
+        // Micro-interactions for restoring or deleting
+        document.querySelectorAll('.task-card').forEach(card => {
+            const restoreBtn = card.querySelector('button.text-primary');
+            const permanentDeleteBtn = card.querySelector('button.text-error');
+
+            restoreBtn.addEventListener('click', () => {
+                card.classList.add('scale-95', 'opacity-0', 'translate-x-4');
+                setTimeout(() => {
+                    card.remove();
+                    checkEmptyState();
+                }, 300);
+            });
+
+            permanentDeleteBtn.addEventListener('click', () => {
+                if(confirm('Bu görevi kalıcı olarak silmek istediğinize emin misiniz?')) {
+                    card.classList.add('scale-95', 'opacity-0', 'blur-sm');
+                    setTimeout(() => {
+                        card.remove();
+                        checkEmptyState();
+                    }, 300);
+                }
+            });
+        });
+
+        function checkEmptyState() {
+            const container = document.querySelector('.space-y-md');
+            if (container.children.length === 0) {
+                container.classList.add('hidden');
+                document.getElementById('empty-state').classList.remove('hidden');
+            }
+        }
+    </script>
+</body></html>

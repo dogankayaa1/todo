@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yalın Odak - Profil ve Ayarlar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d9dadc",
+                    "secondary": "#585f6a",
+                    "primary-container": "#0052cc",
+                    "surface-container-low": "#f3f4f6",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-bright": "#f8f9fb",
+                    "primary": "#003d9b",
+                    "on-primary-fixed": "#001848",
+                    "secondary-fixed-dim": "#c0c7d3",
+                    "surface-container-highest": "#e1e2e4",
+                    "surface-container-high": "#e7e8ea",
+                    "surface-tint": "#0c56d0",
+                    "tertiary": "#7b2600",
+                    "on-secondary-container": "#5e6570",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c3c6d6",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e2e4",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-container": "#ffc6b2",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#380d00",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-secondary-fixed-variant": "#404751",
+                    "on-primary-container": "#c4d2ff",
+                    "secondary-container": "#dce3f0",
+                    "secondary-fixed": "#dce3f0",
+                    "on-error-container": "#93000a",
+                    "surface": "#f8f9fb",
+                    "primary-fixed": "#dae2ff",
+                    "outline": "#737685",
+                    "on-surface": "#191c1e",
+                    "inverse-primary": "#b2c5ff",
+                    "inverse-on-surface": "#f0f1f3",
+                    "surface-container": "#edeef0",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#151c25",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "background": "#f8f9fb",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "tertiary-container": "#a33500",
+                    "on-surface-variant": "#434654"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "xl": "40px",
+                    "container-max": "800px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "base-unit": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-base": ["Inter"],
+                    "display-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .custom-toggle:checked + .toggle-dot { transform: translateX(100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex">
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-full w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-surface-container flex-col p-md space-y-sm z-50">
+<div class="flex items-center space-x-sm mb-lg">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-semibold text-primary">Yalın Odak</h1>
+<p class="text-label-bold font-label-bold text-secondary">Dijital Zen</p>
+</div>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">inbox</span>
+<span class="font-label-bold text-label-bold">Gelen Kutusu</span>
+</a>
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">today</span>
+<span class="font-label-bold text-label-bold">Bugün</span>
+</a>
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-bold text-label-bold">Yakında</span>
+</a>
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+<span class="font-label-bold text-label-bold">Tamamlananlar</span>
+</a>
+</nav>
+<button class="flex items-center justify-center space-x-sm w-full py-md px-lg bg-primary-container text-on-primary rounded-xl font-label-bold text-label-bold hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+<span>Yeni Liste Ekle</span>
+</button>
+<div class="pt-lg border-t border-outline-variant/30 space-y-xs">
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all" href="#">
+<span class="material-symbols-outlined">archive</span>
+<span class="font-label-bold text-label-bold">Arşiv</span>
+</a>
+<a class="flex items-center space-x-md p-sm text-secondary dark:text-secondary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 transition-all" href="#">
+<span class="material-symbols-outlined">delete</span>
+<span class="font-label-bold text-label-bold">Çöp Kutusu</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 bg-surface dark:bg-surface-dim z-40 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center">
+<span class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed">Profil</span>
+</div>
+<div class="flex items-center space-x-md">
+<button class="p-sm text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-full active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-sm text-primary font-bold border-b-2 border-primary transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a young adult with a calm and focused expression, reflecting the Digital Zen aesthetic. The background is a soft, out-of-focus minimalist office with clean lines and neutral tones. Lighting is bright and even, creating a sense of clarity and professionalism. The overall style is modern corporate but approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC7uqMiS-1dFywcmGvu1uiJy70iybrwigrAq_53GXilTZyo7Jb-CtMX9bOJYpuCCWJP5BG3xlSx5VxmlwAUniaVXWCYDBhBHb96A1gDoQa5Y_Dn4DOLw3sMPA8JNsbJ2_YbqmPo4GiwiS6bmU99TIHpxOIsTckwclNNz8K1g-vgobd3xSd7xXG4t-wB3gD1uH9EekQcud6QaYvi28INM8bBMDTAlBH3ThKoJCMVRTGz63Yq3AGI9mSFw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Profile Content -->
+<div class="flex-1 max-w-container-max w-full mx-auto px-gutter py-xl">
+<!-- Profile Header -->
+<section class="mb-xl flex flex-col md:flex-row items-center md:items-start space-y-lg md:space-y-0 md:space-x-lg p-lg bg-surface-container-lowest border border-outline-variant rounded-xl">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-surface-container">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up portrait of a user profile avatar. The person has a serene and mindful expression, looking slightly away from the camera. The setting is a bright, high-key minimalist space with soft blue and white hues. The image reflects a high-end tech environment, prioritizing clean aesthetics and a tranquil mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYf1PjOlQwNVqWCDNudh5czbWVufO2u0x0ashb5Fk04zF_P_sn3H5w-VASbLg6HXsaS50A-R_U8hF7iG24MUAnHI45zlUZmetluJAStwxjQr-uXrigSGCYDZCLxHV88rz2FP6chn0piehYTaUZuHv3AZIsX0gzoWL3iLiE4oCjTpIuXQnFR1VMyIafykcyoPRUl13L3u_usiAGXnBcyk5lWl3lyqjv2JQ8jbFesSov8V4YH3zt1K96LA"/>
+</div>
+<button class="absolute bottom-0 right-0 p-xs bg-primary text-on-primary rounded-full border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-base">photo_camera</span>
+</button>
+</div>
+<div class="text-center md:text-left flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-xs">Caner Yıldız</h2>
+<p class="font-body-base text-body-base text-secondary mb-md">caner.yildiz@yalinodak.app</p>
+<div class="flex flex-wrap gap-sm justify-center md:justify-start">
+<span class="px-md py-xs bg-primary/10 text-primary rounded-full font-label-bold text-label-bold">Yalın Odak Pro</span>
+<span class="px-md py-xs bg-surface-container-high text-secondary rounded-full font-label-bold text-label-bold">Katılma: 2023</span>
+</div>
+</div>
+<button class="px-lg py-md border border-primary text-primary font-label-bold text-label-bold rounded-xl hover:bg-primary/5 transition-colors">
+                    Profili Düzenle
+                </button>
+</section>
+<!-- Settings Grid -->
+<div class="grid grid-cols-1 gap-lg">
+<!-- Account Settings -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<div class="flex items-center space-x-sm mb-lg border-b border-outline-variant/30 pb-md">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+<h3 class="font-headline-md text-headline-md">Hesap Ayarları</h3>
+</div>
+<div class="space-y-lg">
+<div class="flex flex-col space-y-xs">
+<label class="font-label-bold text-label-bold text-secondary">E-posta Adresi</label>
+<input class="w-full p-md bg-surface-bright border border-outline-variant rounded-lg font-body-base text-body-base focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all" type="email" value="caner.yildiz@yalinodak.app"/>
+</div>
+<div class="flex flex-col space-y-xs">
+<label class="font-label-bold text-label-bold text-secondary">Şifre</label>
+<div class="relative">
+<input class="w-full p-md bg-surface-bright border border-outline-variant rounded-lg font-body-base text-body-base focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 outline-none transition-all" type="password" value="********"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-secondary">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end">
+<button class="px-lg py-md bg-primary text-on-primary rounded-xl font-label-bold text-label-bold hover:brightness-110 transition-all">Değişiklikleri Kaydet</button>
+</div>
+</div>
+</section>
+<!-- Preferences -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<div class="flex items-center space-x-sm mb-lg border-b border-outline-variant/30 pb-md">
+<span class="material-symbols-outlined text-primary">settings_suggest</span>
+<h3 class="font-headline-md text-headline-md">Tercihler</h3>
+</div>
+<div class="space-y-xl">
+<!-- Theme Selection -->
+<div>
+<p class="font-label-bold text-label-bold text-secondary mb-md uppercase tracking-wider">Görünüm</p>
+<div class="grid grid-cols-2 gap-md">
+<button class="flex flex-col items-center p-md border-2 border-primary bg-surface-bright rounded-xl transition-all" onclick="setTheme('light')">
+<div class="w-full h-16 bg-white border border-outline-variant rounded-lg mb-sm shadow-sm"></div>
+<span class="font-label-bold text-label-bold">Aydınlık</span>
+</button>
+<button class="flex flex-col items-center p-md border border-outline-variant bg-surface-dim rounded-xl hover:border-primary transition-all" onclick="setTheme('dark')">
+<div class="w-full h-16 bg-zinc-900 border border-zinc-700 rounded-lg mb-sm shadow-sm"></div>
+<span class="font-label-bold text-label-bold">Karanlık</span>
+</button>
+</div>
+</div>
+<!-- Notifications -->
+<div class="space-y-md">
+<p class="font-label-bold text-label-bold text-secondary mb-md uppercase tracking-wider">Bildirimler</p>
+<div class="flex items-center justify-between p-md bg-surface-bright rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-md">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<div>
+<p class="font-body-base text-body-base font-semibold">E-posta Özetleri</p>
+<p class="font-body-sm text-body-sm text-secondary">Günlük tamamlanan görev raporu al.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer custom-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:ring-2 peer-focus:ring-primary-container/20 rounded-full peer peer-checked:bg-primary transition-all"></div>
+<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-all toggle-dot"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-bright rounded-lg border border-outline-variant/30">
+<div class="flex items-center space-x-md">
+<span class="material-symbols-outlined text-secondary">notifications_active</span>
+<div>
+<p class="font-body-base text-body-base font-semibold">Anlık Bildirimler</p>
+<p class="font-body-sm text-body-sm text-secondary">Hatırlatıcılar ve deadline uyarıları.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer custom-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:ring-2 peer-focus:ring-primary-container/20 rounded-full peer peer-checked:bg-primary transition-all"></div>
+<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-all toggle-dot"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<div class="flex items-center space-x-sm mb-lg border-b border-outline-variant/30 pb-md">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+<h3 class="font-headline-md text-headline-md">Abonelik</h3>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-lg flex flex-col md:flex-row md:items-center justify-between space-y-md md:space-y-0">
+<div>
+<div class="flex items-center space-x-sm mb-xs">
+<span class="font-headline-md text-headline-md text-primary">Pro Plan</span>
+<span class="bg-primary text-on-primary text-[10px] px-sm py-0.5 rounded uppercase font-bold tracking-tighter">Aktif</span>
+</div>
+<p class="font-body-base text-body-base text-secondary">Yıllık abonelik — 12 Eylül 2024 tarihinde yenilenecek.</p>
+</div>
+<div class="flex space-x-md">
+<button class="px-md py-sm font-label-bold text-label-bold text-secondary hover:text-on-surface transition-colors">Aboneliği İptal Et</button>
+<button class="px-md py-sm bg-primary text-on-primary rounded-lg font-label-bold text-label-bold hover:brightness-110 transition-all">Planı Değiştir</button>
+</div>
+</div>
+<div class="mt-lg grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="p-md border border-outline-variant rounded-lg">
+<p class="text-label-bold font-label-bold text-secondary uppercase mb-xs">Depolama</p>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%;"></div>
+</div>
+<p class="text-body-sm text-body-sm mt-xs">4.5 GB / 10 GB</p>
+</div>
+<div class="p-md border border-outline-variant rounded-lg">
+<p class="text-label-bold font-label-bold text-secondary uppercase mb-xs">Dosya Limiti</p>
+<p class="text-body-base font-bold">Limitsiz</p>
+</div>
+<div class="p-md border border-outline-variant rounded-lg">
+<p class="text-label-bold font-label-bold text-secondary uppercase mb-xs">Destek</p>
+<p class="text-body-base font-bold">Öncelikli (7/24)</p>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="bg-error-container/10 border border-error/20 rounded-xl p-lg mb-xl">
+<div class="flex items-center space-x-sm mb-md">
+<span class="material-symbols-outlined text-error">report_problem</span>
+<h3 class="font-headline-md text-headline-md text-error">Tehlikeli Bölge</h3>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between space-y-md md:space-y-0">
+<p class="font-body-base text-body-base text-secondary">Hesabınızı silmek tüm verilerinizi kalıcı olarak temizleyecektir. Bu işlem geri alınamaz.</p>
+<button class="px-lg py-md border border-error text-error font-label-bold text-label-bold rounded-xl hover:bg-error/5 transition-all">Hesabı Sil</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface dark:bg-surface-dim border-t border-outline-variant flex items-center justify-around px-gutter z-50">
+<button class="flex flex-col items-center justify-center space-y-xs text-secondary">
+<span class="material-symbols-outlined">inbox</span>
+<span class="text-[10px] font-bold">Gelen</span>
+</button>
+<button class="flex flex-col items-center justify-center space-y-xs text-secondary">
+<span class="material-symbols-outlined">today</span>
+<span class="text-[10px] font-bold">Bugün</span>
+</button>
+<button class="flex flex-col items-center justify-center space-y-xs text-secondary">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-[10px] font-bold">Yeni</span>
+</button>
+<button class="flex flex-col items-center justify-center space-y-xs text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-bold">Ayarlar</span>
+</button>
+</nav>
+<script>
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        // Micro-interactions
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('scale-[1.01]');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+    </script>
+</body></html>
