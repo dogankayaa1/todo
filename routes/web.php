@@ -18,3 +18,4 @@ Route::get('/admin', function () {
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class,'login'])->name('admin.login');
+Route::post('/logout',[AuthController::class,'logout'])->name('admin.logout');

@@ -161,8 +161,28 @@
 <div class="flex items-center space-x-md">
 <button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors active:scale-95">notifications</button>
 <button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors active:scale-95">settings</button>
-<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant">
+<div class="relative">
+<button aria-expanded="false" aria-haspopup="true" class="w-8 h-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary" id="profileDropdownButton" type="button">
 <img class="w-full h-full object-cover" data-alt="A professional studio headshot of a modern tech executive with a friendly expression. The person has short hair, wearing a navy blue blazer over a crisp white shirt. The background is a minimalist, softly blurred corporate office with cool blue lighting and clean lines. High-resolution photography emphasizing trust and professional clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1uZp0cuAtgWWlQz1eLGNqQ5uIMSc8hAF66AQ1tszIwWPmnLp7qj3vsLn3Qr1shq6eLaVN-FqTWMAwC7Ssahr0SO2YVEOZszb2VvmJm6B4QQKB3OsFNcEeyssWnOB2AlEWFkh0LJEQAEb2FZbjVXQ8u_tedTHJbAXLyXpDJwtEIkdhFgMU0-hFtmNSNuTFpB1b6vy4Ks31BDMoIW8IUnrpWuPKpExB6kUFsfv7x7vy3adtkdUGtNujw"/>
+</button>
+<div class="hidden absolute right-0 mt-2 w-48 bg-white border border-outline-variant rounded-lg shadow-soft z-50" id="profileDropdownMenu">
+<a class="flex items-center px-4 py-2 text-body-sm text-on-surface hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined mr-2 text-base">account_circle</span>
+Profil
+</a>
+<a class="flex items-center px-4 py-2 text-body-sm text-on-surface hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined mr-2 text-base">settings</span>
+Ayarlar
+</a>
+<div class="border-t border-outline-variant my-1"></div>
+<form action="/logout" method="POST">
+@csrf
+<button class="w-full flex items-center px-4 py-2 text-body-sm text-error hover:bg-error-container/40" type="submit">
+<span class="material-symbols-outlined mr-2 text-base">logout</span>
+Çıkış Yap
+</button>
+</form>
+</div>
 </div>
 </div>
 </div>
@@ -370,9 +390,26 @@
 </button>
 <script>
         // Simple interactivity for mobile search toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mock data or interaction logic could go here
-            console.log('Admin Dashboard Initialized');
-        });
+                document.addEventListener('DOMContentLoaded', () => {
+                        const dropdownButton = document.getElementById('profileDropdownButton');
+                        const dropdownMenu = document.getElementById('profileDropdownMenu');
+
+                        if (dropdownButton && dropdownMenu) {
+                                dropdownButton.addEventListener('click', (event) => {
+                                        event.stopPropagation();
+                                        const isHidden = dropdownMenu.classList.contains('hidden');
+
+                                        dropdownMenu.classList.toggle('hidden');
+                                        dropdownButton.setAttribute('aria-expanded', String(isHidden));
+                                });
+
+                                document.addEventListener('click', (event) => {
+                                        if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+                                                dropdownMenu.classList.add('hidden');
+                                                dropdownButton.setAttribute('aria-expanded', 'false');
+                                        }
+                                });
+                        }
+                });
     </script>
 </body></html>
